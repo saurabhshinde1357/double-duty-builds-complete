@@ -142,7 +142,7 @@ npm run dev
 ---
 
  🧑‍💻 Author
-This project is ompletely made by me — [Saurabh Sagar Shinde].  
+This project is ompletely made by me — Saurabh Sagar Shinde.  
 Feel free to check out my GitHub and connect for collaborations! 🚀
 
 
@@ -151,6 +151,6 @@ LinkedIn: [https://www.linkedin.com/in/saurabh-shinde-252b83276/]
 
 
  📝 License
-This project is licensed under the **MIT License**.
+This project is licensed under the MIT License.
 
 
