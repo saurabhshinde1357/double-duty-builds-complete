@@ -1,73 +1,156 @@
-# Welcome to your Lovable project
+ 🚀 Multi-Tenant SaaS Platform (MERN Stack)
 
-## Project info
+A scalable, multi-tenant SaaS platform built using the MERN stack (MongoDB, Express.js, React.js, Node.js) where users can create workspaces, manage projects, collaborate with team members, and subscribe to plans.
 
-**URL**: https://lovable.dev/projects/a90e6706-7b92-49a9-9389-14d2a4a5d36a
+---
 
-## How can I edit this code?
+🏗️ Tech Stack
+- Frontend:React.js, TailwindCSS, React Router, Formik + Yup, Socket.io-client
+- Backend: Node.js, Express.js, MongoDB Atlas, JWT, bcrypt, Socket.io, Stripe API
+- Deployment: Vercel (frontend), Render/Railway (backend), MongoDB Atlas (database)
+- State Management: React Context API + **LocalStorage** for persisting user sessions (token, user data).
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+ ✨ Features
+- 🔐 User Authentication (JWT Based, token stored securely in Local Storage)
+- 🏢 Workspace (Company) Creation
+- 👥 Team Management with Role-Based Access (Admin/Manager/Employee)
+- 📋 Project and Task Management with Drag-and-Drop (like Trello)
+- 🔔 Real-Time Notifications (using Socket.io)
+- 💵 Payment Integration (Stripe for subscriptions)
+- ⚙️ Admin Panel for Monitoring Users and Activities
+- 📨 Email Invitations (using Nodemailer)
+- 🌑 Dark Mode Support (optional)
+- 📱 Responsive Design (PWA-ready)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a90e6706-7b92-49a9-9389-14d2a4a5d36a) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+📂 Folder Structure
 
-**Use your preferred IDE**
+ Frontend
+```
+/src
+  /components
+  /pages
+  /context
+  /services
+  /hooks
+  /utils
+  App.jsx
+  main.jsx
+  index.css
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Backend
+```
+/controllers
+/users
+/projects
+/tasks
+/companies
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+/routes
+/users.js
+/projects.js
+/tasks.js
+/companies.js
 
-Follow these steps:
+/models
+/userModel.js
+/companyModel.js
+/projectModel.js
+/taskModel.js
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+/services
+/stripeService.js
+/mailerService.js
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+/middlewares
+/authMiddleware.js
+/roleMiddleware.js
 
-# Step 3: Install the necessary dependencies.
-npm i
+/config
+/db.js
+stripe.js
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+server.js
+```
+
+---
+
+🛠️ Setup Instructions
+
+1. Clone the repository
+```bash
+git clone https://github.com/your-username/saas-platform.git
+cd saas-platform
+```
+
+ 2. Setup Backend
+```bash
+cd backend
+npm install
+```
+- Create a `.env` file inside `/backend`:
+```env
+PORT=5000
+MONGO_URI=your_mongo_db_connection_string
+JWT_SECRET=your_jwt_secret
+STRIPE_SECRET_KEY=your_stripe_secret_key
+CLIENT_URL=http://localhost:3000
+```
+- Start the backend server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+3. Setup Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+ 🔐 Environment Variables Required
+| Key | Description |
+|:---|:---|
+| MONGO_URI | MongoDB Connection URI |
+| JWT_SECRET | Secret key for JWT authentication |
+| STRIPE_SECRET_KEY | Stripe secret API key |
+| CLIENT_URL | Frontend base URL (for CORS and redirects) |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+🚀 Deployment
+- Frontend → Deploy using [Vercel](https://vercel.com/)
+- Backend → Deploy using [Render](https://render.com/) or [Railway](https://railway.app/)
+- Database → Use [MongoDB Atlas](https://www.mongodb.com/atlas)
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
+ 📦 Storage & Session
+- Frontend: 
+  - User session (JWT Token, User Data) is stored securely in LocalStorage.
+  - Authenticated APIs use token from LocalStorage automatically.
 
-Simply open [Lovable](https://lovable.dev/projects/a90e6706-7b92-49a9-9389-14d2a4a5d36a) and click on Share -> Publish.
+- Backend: 
+  - JWT authentication middleware validates each API call using the token.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+ 🧑‍💻 Author
+This project is ompletely made by me — [Saurabh Sagar Shinde].  
+Feel free to check out my GitHub and connect for collaborations! 🚀
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+LinkedIn: [https://www.linkedin.com/in/saurabh-shinde-252b83276/]
+
+
+
+ 📝 License
+This project is licensed under the **MIT License**.
+
+
