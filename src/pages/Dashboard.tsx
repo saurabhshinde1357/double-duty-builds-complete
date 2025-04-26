@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import DashboardLayout from "@/components/DashboardLayout";
 import { Button } from "@/components/ui/button";
 import { Plus, Users, Clock, CheckCircle, AlertCircle } from "lucide-react";
+import Layers from "@/components/ui/Layers";
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
